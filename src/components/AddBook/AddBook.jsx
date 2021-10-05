@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './AddBook.css';
 
 
 class AddBook extends Component {
@@ -25,18 +26,19 @@ class AddBook extends Component {
 
     render() { 
         return ( 
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                    Title:
-                    <input name='title' type="text" value={this.state.title} onChange={this.handleChange} />
-                </label>
-                <br />
-                <label>
-                    Author:
-                    <input name='author' type="text" value={this.state.author} onChange={this.handleChange} />
-                </label>
-                <input type="submit" value="Add Book" />
-            </form>
+            <div className='row row-space'>
+                <form onSubmit={this.handleSubmit}>
+                    <label>
+                        Title:
+                        <input name='title' type="text" value={this.state.title} onChange={this.handleChange} />
+                    </label>
+                    <label>
+                        Author:
+                        <input name='author' type="text" value={this.state.author} onChange={this.handleChange} />
+                    </label>
+                    <input type="submit" value="Add Book" />
+                </form>
+            </div>
          );
     }
 }
